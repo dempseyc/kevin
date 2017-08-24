@@ -1,0 +1,68 @@
+body {
+  background-color: #130F10;
+  margin-left: 25px;
+  margin-top: 25px;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  color: #FFF;
+}
+
+nav {
+  display: block;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav .soc-med ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+#mc_embed_signup {
+  background: #130F10;
+  clear: left;
+  width: 400px;
+}
+
+.mc-field-group {
+  font-size: 2rem;
+}
+
+.main-container {
+  width: 600px;
+  margin: auto;
+}
+
+.container {
+
+}
+
+nav {
+
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+nav .soc-med {
+
+}
+
+p {
+  font-size: 1.5rem;
+  color: #888;
+}
+
+iframe {
+  width: 100%;
+}
+
+img {
+  width: 100%;
+  margin: 0 auto;
+}
