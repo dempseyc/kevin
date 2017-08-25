@@ -1,24 +1,117 @@
 body {
   background-color: #130F10;
-  margin-left: 25px;
-  margin-top: 25px;
+/*  margin-left: 25px;
+  margin-top: 25px;*/
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   font-size: 18px;
   color: #FFF;
 }
 
-nav {
+ul {
+  list-style: none;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.main-container {
   display: block;
+  width: 90%;
+  margin-left: 0;
+  margin-right: 10%;
+}
+
+header {
+  position: fixed;
+  top: 2%;
+  width: 100%;
+}
+
+nav {
+  width: 60%;
+}
+
+footer {
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+}
+
+.container {
+  width: 60%;
+  margin: auto;
+}
+
+nav a {
+  color: #F6A;
 }
 
 nav ul {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 nav .soc-med ul {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  flex-basis: auto;
+}
+
+section {
+  padding-top: 30%;
+  display: block;
+}
+
+#bio {
+}
+
+a i {
+  color: #FFF;
+}
+
+a {
+  color: #66F;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #86F;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+p {
+  font-size: 1.5rem;
+  color: #888;
+}
+
+iframe {
+  width: 80%;
+  margin: 2% 10% 2% 10%;
+}
+
+img {
+  width: 80%;
+  margin: auto;
+}
+
+.two-col img{
+  width: 40%;
+  float: left;
+}
+
+.two-col p {
+  display: block;
+  width: 50%;
+  padding: 0 5% 0 5%;
+  float: right;
+}
 }
 
 #mc_embed_signup {
@@ -29,40 +122,4 @@ nav .soc-med ul {
 
 .mc-field-group {
   font-size: 2rem;
-}
-
-.main-container {
-  width: 600px;
-  margin: auto;
-}
-
-.container {
-
-}
-
-nav {
-
-}
-
-h1 {
-  font-size: 2rem;
-  text-align: center;
-}
-
-nav .soc-med {
-
-}
-
-p {
-  font-size: 1.5rem;
-  color: #888;
-}
-
-iframe {
-  width: 100%;
-}
-
-img {
-  width: 100%;
-  margin: 0 auto;
 }
