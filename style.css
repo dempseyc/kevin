@@ -89,7 +89,12 @@ header {
 
 nav {
   line-height: 2rem;
-  width: 60%;
+  width: 80%;
+  margin-left: 10%;
+}
+
+.soc-med {
+  display: none;
 }
 
 footer {
@@ -109,14 +114,14 @@ footer {
   margin: auto;
 }
 
-nav a {
-  color: #A6F;
-}
-
 nav ul {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+
+nav a {
+  color: #AAF;
 }
 
 section {
@@ -124,6 +129,7 @@ section {
   display: block;
   padding-top: 10%;
 }
+
 
 #bio {
 }
@@ -142,7 +148,7 @@ a {
 }
 
 a:visited {
-  color: #86F;
+  color: #88F;
 }
 
 h1 {
@@ -187,4 +193,57 @@ img {
 
 .mc-field-group {
   font-size: 2rem;
+}
+
+.view-cap, .view-container-border {
+  background-color: #000;
+}
+
+@media screen and (max-device-width: 750px){
+  .soc-med {
+    display: block;
+    font-size: 4rem;
+    margin: 10% 0 10% 0;
+  }
+  .soc-med ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .soc-med a {
+    color: #AAF;
+  }
+  nav {
+    display: none;
+  }
+  footer {
+    display: none;
+  }
+  p {
+    font-size: 2rem;
+  }
+  .container {
+    width: 90%;
+    margin: auto;
+  }
+  section {
+    height: 50%;
+    display: block;
+    padding-top: 10%;
+  }
+  .two-col {
+    width
+  }
+  .two-col img {
+    width: 100%;
+    display: block;
+    float: none;
+    margin-bottom: 10%;
+  }
+  .two-col p {
+    width: 100%;
+    display: block;
+    float: none;
+    margin-bottom: 10%;
+  }
 }
