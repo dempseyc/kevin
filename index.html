@@ -5,6 +5,7 @@
     <title>Meet Kevin Berrey</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="jquery.js">
     <!-- what is this -->
   <!--   <script src="file:/*ScreamingPanda/*Development/BDRM.TV/Website/bdrm.tv/includes/ice/ice.js" type="text/javascript"></script> -->
 
@@ -22,7 +23,7 @@
       })();
 
     </script>
-    <script href="authcal.js" type="text/javascript"></script>
+    <!-- <script src="custom_calendar.php"></script> -->
   </head>
 
   <body>
@@ -62,25 +63,36 @@
             </p>
           </div> <!-- close two-col -->
 
-        </section>
+<!--   -->
+            <!-- maybe make this fade in?? -->
 
-<!--         <section>
-          <p>His talents are further illustrated by the following collage:
+          <p class="fade-in-after-two"><br />
+            <br />Yes, he's a stand-up comedian. But as you might imagine there's a lot of heat on this guy in film, television, and new media circles. So if you want to know what all the hubbub is about,<a href="#calendar"> pick a show from his calendar right now</a> and see him live while you still can.
           </p>
 
-          <img width="500" img src="http://berreycomic.com/media/images/berrey-splash.jpg" alt="Face of Kevin Berrey">
-          <br />
-        </section> -->
-<!--           <p>Yes, he's a stand-up comedian. But as you might imagine there's a lot of heat on this guy in film, television, and new media circles. So if you want to know what all the hubbub is about,<a style="color: #548FDD; text-decoration: none ; background: #1A1A1A" href="http://berreycomic.com/cal" target="_blank"> pick a show from his calendar right now</a> and see him live while you still can.
-          </p> -->
+        </section>
 
         <section id="calendar">
           <!-- to be replaced -->
           <h1>CALENDAR</h1>
 
-          <div width="500" height="300" background-color="#666"></div>
+          <div class="clld-calendar">
+          </div>
 
-<!--           <iframe src="https://www.google.com/calendar/embed?showCalendars=0&amp;mode=AGENDA&amp;height=400&amp;wkst=1&amp;bgcolor=%23cccccc&amp;src=0ujk7748ek4nhhtv3p0sbtir5o%40group.calendar.google.com&amp;color=%23875509&amp;ctz=America%2FNew_York" style=" border:solid 1px #777 " width="500" height="300" frameborder="0" scrolling="no"></iframe> -->
+<!-- php custom iframe -->
+
+
+<!-- <iframe src="gcal.html" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+
+<script src="custom_calendar.php"></script> -->
+
+<!-- my iframe -->
+
+<iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23000000&amp;src=0ujk7748ek4nhhtv3p0sbtir5o%40group.calendar.google.com&amp;color=%23865A5A&amp;ctz=America%2FNew_York" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+
+<!-- kberrys iframe -->
+
+<!-- <iframe src="https://www.google.com/calendar/embed?showCalendars=0&amp;mode=AGENDA&amp;height=400&amp;wkst=1&amp;bgcolor=%23cccccc&amp;src=0ujk7748ek4nhhtv3p0sbtir5o%40group.calendar.google.com&amp;color=%23875509&amp;ctz=America%2FNew_York" style=" border:solid 1px #777 " width="500" height="300" frameborder="0" scrolling="no"></iframe> -->
 
           <!-- /to be replaced -->
         </section>
@@ -156,7 +168,8 @@
 
       </div> <!-- end container -->
     </div> <!-- end main-container -->
-
+    <script src="jquery.js" type="text/javascript"></script>
+    <script src="anim.js" type="text/javascript"></script>
   </body>
 
 </html>

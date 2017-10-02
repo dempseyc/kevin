@@ -1,4 +1,4 @@
-$your_google_calendar="https://www.google.com/calendar/embed?src=usa__en@holiday.calendar.google.com&gsessionid=OK";
+<!-- $your_google_calendar='https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23000000&amp;src=hhc1mfvhcajj77n5jcte1gq50s%40group.calendar.google.com&amp;color=%23865A5A&amp;ctz=America%2FNew_York'; -->
 $url= parse_url($your_google_calendar);
 $google_domain = $url['scheme'].'://'.$url['host'].dirname($url['path']).'/';
 
@@ -27,9 +27,13 @@ $element = $dom->createElement('link');
 $element->setAttribute('type', 'text/css');
 $element->setAttribute('rel', 'stylesheet');
 $element->setAttribute('href', 'custom_calendar.css');
+
 // Append this link at the end of the element
+
 $head = $dom->getElementByTagName('head')->item(0);
 $head->appendChild($element);
+
 // Export the HTML
+
 echo $dom->saveHTML();
 ?>

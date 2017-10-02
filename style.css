@@ -183,7 +183,6 @@ img {
   padding: 0 5% 0 5%;
   float: right;
 }
-}
 
 #mc_embed_signup {
   background: #130F10;
@@ -197,6 +196,12 @@ img {
 
 .view-cap, .view-container-border {
   background-color: #000;
+}
+
+.fade-in-after-two {
+  opacity: 0;
+  transition: opacity 2s;
+  webkit-transition: opacity 2s;
 }
 
 @media screen and (max-device-width: 750px){
@@ -235,8 +240,9 @@ img {
     width
   }
   .two-col img {
-    width: 100%;
     display: block;
+    width: 95%;
+    margin: auto;
     float: none;
     margin-bottom: 10%;
   }
