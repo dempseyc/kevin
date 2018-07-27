@@ -72,5 +72,3 @@ let timer2sec = setTimeout(function() {
 
 }, 6000);
 
-
-
