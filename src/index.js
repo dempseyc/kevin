@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import $ from 'jquery';
+import scrollify from 'jquery-scrollify';
 import './style.scss';
 
 let $body = $(document.body);
@@ -22,3 +23,14 @@ function jqComponent() {
 
 document.body.appendChild(component());
 $body.append(jqComponent());
+
+const $page1 = $('.mag-page1');
+
+$(function() {
+    $.scrollify({
+        section: ".mag-page",
+        sectionName: "page",
+        easing: "easeOutExpo",
+        scrollSpeed: 900
+    });
+});
