@@ -29,8 +29,34 @@ const $page1 = $('.mag-page1');
 $(function() {
     $.scrollify({
         section: ".mag-page",
-        sectionName: "page",
         easing: "easeOutExpo",
-        scrollSpeed: 900
+        scrollSpeed: 900,
+        before: (index,sections) => {
+            changeNavHighlight(index,sections);
+        }
     });
 });
+
+function changeNavHighlight(index,sections) {
+    let $all = $('#main-nav > li');
+    $all.removeClass('highlight');
+    let $li = $(`#main-nav li:eq(${index})`);
+    $li.addClass('highlight');
+}
+
+function addNavLinks () {
+    let links = ['home','calendar','projects','subscribe','apples'];
+    let $nav = $('#main-nav');
+    links.forEach((li)=>{
+        let $link = $(`<li>`);
+        let moveTo = `#${li}`;
+        $link.click(()=>{
+            $.scrollify.move(moveTo);
+        });
+        $link.text(li);
+        $nav.append($link);
+    });
+    $('#main-nav li:first-child').addClass('highlight');
+}
+
+addNavLinks();
