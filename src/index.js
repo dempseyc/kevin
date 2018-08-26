@@ -1,30 +1,11 @@
 import _ from 'lodash';
 import $ from 'jquery';
 import scrollify from 'jquery-scrollify';
+import { squeezeIn, fadeIn } from './anim.js';
+
 import './style.scss';
 
 let $body = $(document.body);
-
-function component() {
-    let element = document.createElement('div');
-
-    // Lodash, currently included via a script, is required for this line to work
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-    element.classList.add('hello');
-    return element;
-
-    
-}
-function jqComponent() {
-    let $el = $('<div>');
-    $el.text('jquery ready');
-    return $el;
-}
-
-document.body.appendChild(component());
-$body.append(jqComponent());
-
-const $page1 = $('.mag-page1');
 
 $(function() {
     $.scrollify({
@@ -34,6 +15,13 @@ $(function() {
         before: (index,sections) => {
             changeNavHighlight(index,sections);
         }
+    });
+});
+
+$('iframe').each(function() {
+    let $iframe = this;
+    $iframe.addEventListener('mousemove', function() {
+        $iframe.css({"pointer-events": "all"});
     });
 });
 
@@ -60,3 +48,30 @@ function addNavLinks () {
 }
 
 addNavLinks();
+
+const $title = $('.marquee').eq(0);
+console.log($title);
+squeezeIn($title);
+
+const $paragraphTwo = $('.p2').eq(0);
+fadeIn($paragraphTwo);
+
+// function component() {
+//     let element = document.createElement('div');
+
+//     // Lodash, currently included via a script, is required for this line to work
+//     element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+//     element.classList.add('hello');
+//     return element;
+
+// }
+// function jqComponent() {
+//     let $el = $('<div>');
+//     $el.text('jquery ready');
+//     return $el;
+// }
+
+// document.body.appendChild(component());
+// $body.append(jqComponent());
+
+// const $page1 = $('.mag-page1');

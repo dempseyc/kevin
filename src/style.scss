@@ -14,18 +14,21 @@ time, mark, audio, video {
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
+    font-size: 18px;
     font: inherit;
     vertical-align: baseline;
 } // basic reset
 
 body {
     background-color: #130F10;
-    /*  margin-left: 25px;
-    margin-top: 25px;*/
+    font-size: 1rem;
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    color: #aaaaaa;
+    color: #cccccc;
+}
+
+iframe {
+    // pointer-events: none;
+    overflow: hidden;
 }
 
 ul {
@@ -33,36 +36,57 @@ ul {
 }
 
 header {
+    display: block;
     position: fixed;
     width: 100%;
     background-color: #333;
+    height: auto;
+    text-align: center;
 }
+
 header h1.marquee  {
-    justify-content: center;
     display: block;
-    padding: 5%;
-    width: 100%;
-    font-family: 'DotriceRegular'; 
-    font-size: 5em; 
+    margin-top: 1em;
+    padding: 0.5em;
+    font-size: 2em;
+    animation-name: title-shrink;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
     font-weight: bold;
-    transition: font-size 1s;
+    width: 100%;
+}
+
+.e-span {
+    display: inline-block;
+    animation-name: font-grow;
+    animation-duration: 1s;
+    font-size: 1em;
+    // vertical-align: middle;
+    transform: rotate(-3deg);
 }
   
 nav {
     position: fixed;
-    width: 100%;
+    width: 100vw;
     line-height: 2rem;
+    background-color: #444444;
 }
 nav ul {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    background-color: #444444;
+    justify-items: center;
 }
 nav ul li {
     cursor: pointer;
     transition: color 500ms;
 }
+
+$homeColor: #999999;
+$caleColor: #e9d13b;
+$projColor: #66aa66;
+$subsColor: #6666aa;
+$applColor: #aa6666;
 
 nav ul li.highlight {
     color: #dddddd;
@@ -70,27 +94,118 @@ nav ul li.highlight {
 
 .main-container {
     display: block;
-    // width: 90%;
-    // margin-left: 0;
-    // margin-right: 10%;
-}
-
-.hello {
-    color: green;
 }
 
 .mag-page {
     height: 100vh; // set by scrollify
+    max-height: 100vh;
 }
+
+.flex-content {
+    max-height: 100vh;
+    padding-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    margin: auto;
+    align-content: center;
+    padding-bottom: 5rem;
+    @media screen and (max-width: 500px) {
+        width: 95vw;
+    }
+}
+
+.two-col {
+    width: 100%; //base on width of flex-content
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+        max-width: 30vw;
+        height: auto;
+    }
+    p {
+        max-width: 30vw;
+        padding: 3vw;
+    }
+
+    @media screen and (max-width: 500px) {
+        display: block;
+        text-align: center;
+        img {
+            max-width: 90vw;
+            height: auto;
+            margin: auto;
+        }
+        p {
+            max-width: 90vw;
+            padding: 3vw 3vw 3vw 3vw;
+            margin: auto;
+        }
+    }
+}
+
+.p2 {
+    display: block;
+    opacity: 0;
+    transition: opacity 1s;
+    webkit-transition: opacity 1s;
+}
+
 .page-1 {
     background-color: #666666;
 }
 .page-2 {
-    background-color: #884444;
+    background-image: url('../media/images/montage-kevin-berrey-comedy.jpg');
+    background-repeat: repeat;
+    background-position-y: 30%;
 }
 .page-3 {
     background-color: #448844;
 }
 .page-4 {
     background-color: #444488;
+}
+
+.calendar {
+    opacity: 0.8;
+}
+
+.cursor {
+    animation-name: cursor-blink;
+    animation-iteration-count: infinite;
+    animation-duration: 500ms;
+}
+
+@keyframes title-shrink {
+    0% { 
+        font-size: 4em;
+    }
+    75% { 
+        font-size: 4em;
+    }
+    100% { 
+        font-size: 2em;
+    }
+}
+
+@keyframes cursor-blink {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes font-grow {
+    0% {
+        font-size: 0em;
+
+    }
+    100% {
+        font-size: 1em;
+    }
 }
